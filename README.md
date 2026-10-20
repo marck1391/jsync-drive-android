@@ -56,7 +56,7 @@ signed with the same key.
 
 ## Known limits / not verified
 
-- **Real arm64**: only x86_64 (the emulator) was run. The arm64 node builds, but it was not run on a phone yet.
+- **arm64**: runs on a real phone (a Huawei) as well as the x86_64 emulator. Only a small set of phones was tried.
 - **Server**: the Drive API change that lets device tokens register in `/api/v1/p2p/devices` and `/ice` must be deployed on
   `jsyncd` for the phone to register and list devices; without it, "Devices" shows a 403 error.
 - **P2P**: without a TURN server it only works on the same network (or with reachable IPs); there is no Web Push (a phone without
