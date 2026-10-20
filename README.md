@@ -1,58 +1,69 @@
-# jsync Drive para Android
+# jsync Drive for Android
 
-Tu Drive de jsync como almacenamiento del teléfono, montado igual que `jsync mount drive`: mismo hub NATS (nodo *leaf*
-embebido), mismo handshake firmado con X3DH + Double Ratchet, mismas carpetas cifradas de extremo a extremo.
+Your jsync Drive as storage on your phone, mounted the same way `jsync mount drive` does it on a desktop: the same NATS hub
+(an embedded *leaf* node), the same signed handshake with X3DH + Double Ratchet, the same end-to-end encrypted folders.
 
-## Qué hace
+## What it does
 
-| Función | Cómo |
+| Feature | How |
 |---|---|
-| **Drive como almacenamiento** | `DocumentsProvider` (SAF): aparece en "Archivos" y en el selector de cualquier app. Lectura por rangos bajo demanda (como los marcadores de CfAPI), crear / escribir / renombrar / mover / borrar (el borrado va a la papelera del Drive), búsqueda, y los cambios remotos refrescan la carpeta abierta. |
-| **App para explorar y subir** | Compose: explorar, subir archivos, crear carpeta, renombrar, borrar, abrir con otra app, desbloquear carpetas cifradas. Destino de "Compartir" (al Drive o a otro dispositivo). |
-| **Carpetas cifradas** | Se muestran bloqueadas hasta introducir la contraseña de la vault (se verifica en el teléfono; nunca se envía). Leer y escribir dentro cuando están abiertas; se pueden volver a bloquear solas (30 min / 4 h / nunca). |
-| **Enviar a otros dispositivos** | WebRTC directo entre tus dispositivos (mismo protocolo que la web, `src/lib/p2p.ts`): notificación con Aceptar/Rechazar, dispositivos de confianza, progreso y cancelación; lo recibido va a `Descargas/jsync`. |
-| **Carpeta sincronizada** | Una carpeta del teléfono (elegida con el selector del sistema) igual a una carpeta del Drive, en los dos sentidos. Si ambos lados cambian el mismo archivo se conservan las dos versiones; un lado vacío o ilegible no borra el otro (límite del 50 %). |
+| **Drive as storage** | A `DocumentsProvider` (SAF): it shows up in "Files" and in every app's file picker. Range reads on demand (like Cloud Filter placeholders on Windows); create / write / rename / move / delete (deletes go to the Drive's trash); search; remote changes refresh the open folder. |
+| **Browse and upload** | A Compose app: browse with image previews (grid or list), upload, new folder, rename, delete, open with another app, share, download. Folder colours, pins, and sharing a folder with another person. Also a target for Android's "Share" (to the Drive, or to another device). |
+| **Encrypted folders** | Shown locked until you enter the vault password (checked on the phone, never sent). Read and write inside once open; they can lock themselves again (30 min / 4 h / never). |
+| **Send to other devices** | Direct WebRTC between your devices (same protocol as the web app): a notification with Accept / Decline, trusted devices, progress and cancel. Tapping a request opens a window with a preview of the file (or its type icon) and the actions for it; received files go to `Downloads/jsync` (or Pictures / Movies / Music by type). |
+| **Synced folder** | A folder on the phone (picked with the system picker) kept equal to a Drive folder, both ways. If both sides change the same file, both versions are kept; an empty or unreadable side never deletes the other (50 % limit). |
+| **Updates from your own Drive** | The app looks for a newer build in `Apps/jsync-android` of your Drive, checks its SHA-256, and installs it. `publish-update.ps1` builds, signs and uploads one. |
 
-## Cómo está hecho
+English and Spanish, light and dark.
+
+## How it is built
 
 ```
-app Kotlin (Compose, DocumentsProvider, servicio en primer plano)
-        │  HTTP en 127.0.0.1 + token Bearer, eventos por SSE
+Kotlin app (Compose, DocumentsProvider, foreground service)
+        │  HTTP on 127.0.0.1 + Bearer token, events over SSE
         ▼
-libjsyncnode.so  = nodo Go estático (sin cgo ni gomobile; el SDK no tiene NDK), proceso hijo de la app
-        ├─ nodo NATS leaf embebido ──▶ hub (jsyncd)
-        ├─ mountfs.Client + VFS (árbol, caché de bloques, escritura por staging, cifradas)
-        └─ P2P (pion/webrtc) + señalización por el WebSocket de la API del Drive
+libjsyncnode.so  = static Go node (no cgo or gomobile), a child process of the app
+        ├─ embedded NATS leaf node ──▶ hub (jsyncd)
+        ├─ mountfs.Client + VFS (tree, block cache, staged writes, encrypted folders)
+        └─ P2P (pion/webrtc) + signalling over the Drive API's WebSocket
 ```
 
-El código Go vive en el repo `../filesharer`: `internal/androidnode` (nodo, API local, P2P), `cmd/jsyncnode` (ejecutable),
-`internal/mountfs/vfs.go` (el "sistema de archivos sin kernel" que usa la API). Aquí solo está la app.
+The Go code lives in the main jsync repository: `internal/androidnode` (node, local API, P2P), `cmd/jsyncnode` (the executable),
+`internal/mountfs/vfs.go` (the "file system without a kernel" the API uses). Only the app is here.
 
-## Compilar
+## Build
 
 ```powershell
-.\build-node.ps1                 # compila el nodo Go (arm64-v8a y x86_64) a app/src/main/jniLibs
+.\build-node.ps1                 # builds the Go node (arm64-v8a and x86_64) into app/src/main/jniLibs
 $env:JAVA_HOME = 'C:\Program Files\Java\jdk-21.0.10'
 .\gradlew.bat assembleDebug      # app/build/outputs/apk/debug/app-debug.apk
-.\gradlew.bat testDebugUnitTest  # decisiones de la sincronización (SyncPlanTest)
+.\gradlew.bat testDebugUnitTest  # sync decisions (SyncPlanTest)
 ```
+
+`build-node.ps1` expects the jsync Go repository in `..\filesharer` (not included here).
 
 AGP 8.7.3 · Kotlin 2.1.0 · Gradle 8.11.1 · compileSdk 35 · minSdk 26.
 
-## Pruebas
+Release builds are signed with `keystore/debug.keystore` (git-ignored). Keep a private copy: updates only install over an app
+signed with the same key.
 
-- Go (en `../filesharer`): `go test ./internal/androidnode` — hub y API del Drive reales en proceso: login, montaje, lectura/escritura,
-  eventos, carpeta cifrada, P2P con WebRTC real. Ejecutar con `TMP`/`TEMP`/`TMPDIR` apuntando a `filesharer/tmp`.
-- Interop con la web real: `../jsync-drive/.test/android-interop-2026-10-19/`.
+## Testing
 
-## Límites conocidos / sin verificar
+- Go side (in the jsync repository): `go test ./internal/androidnode` runs a real hub and Drive API in-process: login, mount,
+  read/write, events, an encrypted folder, P2P over real WebRTC.
+- Interop with the web app: a real Chrome running the web app's own P2P modules exchanged files in both directions with the node (SHA-256 checked).
+- The app itself was run on an x86_64 emulator against a local hub and a real server.
 
-- **arm64 real**: solo se probó x86_64 (emulador). El nodo arm64 compila, pero no corrió (el emulador lo traduce y falla); hay que probarlo en un teléfono.
-- **Servidor**: el cambio de `internal/driveapi/server.go` (tokens de dispositivo en `/api/v1/p2p/devices` y `/ice`) debe estar desplegado en
-  `jsyncd` para que el teléfono pueda registrarse y listar dispositivos; sin él, "Devices" muestra un error 403.
-- **P2P**: sin servidor TURN solo funciona en la misma red (o con IPs alcanzables); no hay Web Push (un teléfono sin Google Services) — el aviso
-  llega mientras el servicio en primer plano mantiene el socket abierto. Candidatos mDNS entre un teléfono real y un navegador: sin probar.
-- **Carpeta sincronizada**: no hay vigilancia fiable de cambios locales en SAF; se detectan al abrir la app, con "Sync now", por el
-  `ContentObserver` cuando el proveedor lo notifica, y cada 5 min con el servicio activo. No se propagan carpetas vacías ni su borrado.
-- Archivos cifrados mayores de 256 MB y Drive con cifrado en reposo (`storage key`): no soportados en el nodo Android.
-- Sin vigilancia de batería / datos móviles: sincroniza con la red que haya.
+## Known limits / not verified
+
+- **Real arm64**: only x86_64 (the emulator) was run. The arm64 node builds, but it was not run on a phone yet.
+- **Server**: the Drive API change that lets device tokens register in `/api/v1/p2p/devices` and `/ice` must be deployed on
+  `jsyncd` for the phone to register and list devices; without it, "Devices" shows a 403 error.
+- **P2P**: without a TURN server it only works on the same network (or with reachable IPs); there is no Web Push (a phone without
+  Google Services), so a request arrives while the foreground service keeps the socket open. mDNS candidates between a real phone
+  and a browser: untested.
+- **Synced folder**: SAF has no reliable change watching; local changes are noticed when the app opens, on "Sync now", from the
+  `ContentObserver` when the provider reports them, and every 5 min while the service runs. Empty folders and their deletion are not propagated.
+- Encrypted files larger than 256 MB and Drives with encryption at rest (`storage key`) are not supported in the Android node.
+- No battery or mobile-data awareness: it syncs over whatever network there is.
+- Protecting or unprotecting a folder (which needs client-side crypto and the vault setup) is not in the app; use the web app.
