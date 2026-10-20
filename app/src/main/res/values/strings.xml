@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">jsync Drive</string>
+    <string name="share_label">jsync Drive</string>
+    <string name="root_title">jsync Drive</string>
+    <string name="channel_connection">Connection</string>
+    <string name="channel_transfers">Transfers</string>
+    <string name="channel_requests">Incoming files</string>
+
+    <!-- notifications -->
+    <string name="notif_connected">Connected as %1$s</string>
+    <string name="notif_connecting">Connecting…</string>
+    <string name="notif_offline">Offline, retrying</string>
+    <string name="notif_pending">Waiting for you to approve this device</string>
+    <string name="notif_logged_out">Not signed in</string>
+    <string name="notif_needs_setup">Needs the Drive and hub addresses</string>
+    <string name="notif_starting">Starting…</string>
+    <string name="notif_wants_to_send">%1$s wants to send you a file</string>
+    <string name="notif_sending_to">Sending to %1$s</string>
+    <string name="notif_receiving_from">Receiving from %1$s</string>
+    <string name="notif_received">Received %1$s</string>
+    <string name="notif_received_body">From %1$s · saved in Downloads/jsync</string>
+    <string name="notif_save_failed">Could not save %1$s</string>
+
+    <!-- navigation -->
+    <string name="nav_files">Files</string>
+    <string name="nav_sync">Sync</string>
+    <string name="nav_devices">Devices</string>
+    <string name="nav_settings">Settings</string>
+
+    <!-- common -->
+    <string name="cancel">Cancel</string>
+    <string name="clear">Clear</string>
+    <string name="create">Create</string>
+    <string name="delete">Delete</string>
+    <string name="rename">Rename</string>
+    <string name="name">Name</string>
+    <string name="add">Add</string>
+    <string name="send">Send</string>
+    <string name="view_list">View as list</string>
+    <string name="view_grid">View as grid</string>
+    <string name="viewer_close">Close</string>
+    <string name="viewer_open_with">Open with another app</string>
+    <string name="viewer_failed">No se pudo cargar esta imagen. Toca para abrirla con otra app.</string>
+    <string name="share">Share</string>
+    <string name="pin">Pin</string>
+    <string name="unpin">Unpin</string>
+    <string name="download">Download</string>
+    <string name="share_with_people">Share with people</string>
+    <string name="folder_color">Folder color</string>
+    <string name="color_default">Default</string>
+    <string name="color_blue">Blue</string>
+    <string name="color_green">Green</string>
+    <string name="color_yellow">Yellow</string>
+    <string name="color_red">Red</string>
+    <string name="color_purple">Purple</string>
+    <string name="color_orange">Orange</string>
+    <string name="color_pink">Pink</string>
+    <string name="color_cyan">Cyan</string>
+    <string name="color_grey">Grey</string>
+    <string name="share_folder_title">Share %1$s</string>
+    <string name="share_with">Shared with</string>
+    <string name="share_email">Email of the person</string>
+    <string name="perm_view">Can view</string>
+    <string name="perm_edit">Can edit</string>
+    <string name="share_action">Share</string>
+    <string name="share_remove">Stop sharing with %1$s</string>
+    <string name="done">Done</string>
+    <string name="msg_downloading">Downloading %1$s…</string>
+    <string name="msg_downloaded">Saved %1$s to Downloads</string>
+    <string name="err_color">Could not change the color</string>
+    <string name="err_pin">Could not change the pin</string>
+    <string name="err_download">Could not download</string>
+    <string name="settings_about">About</string>
+    <string name="settings_version">Version</string>
+    <string name="update_available">Update available: %1$s</string>
+    <string name="update_now">Update</string>
+    <string name="update_downloading">Downloading the update… %1$d%%</string>
+    <string name="update_installing">Installing the update…</string>
+    <string name="update_check">Check for updates</string>
+    <string name="update_checking">Checking…</string>
+    <string name="update_up_to_date">You have the latest version.</string>
+    <string name="update_none_yet">No update has been published to your Drive yet.</string>
+    <string name="update_failed">The update failed: %1$s</string>
+    <string name="update_bad_checksum">The downloaded update does not match its checksum</string>
+    <string name="update_allow_installs">Allow this app to install updates, then tap Update again.</string>
+    <string name="tr_received_from">Received from %1$s</string>
+    <string name="tr_received_title">Received</string>
+    <string name="tr_preview_after">The preview appears once you accept.</string>
+    <string name="tr_saving">Saving…</string>
+    <string name="tr_saved_in">Saved in %1$s</string>
+    <string name="tr_open">Open</string>
+    <string name="tr_close">Close</string>
+    <string name="tr_always">Always accept from %1$s</string>
+    <string name="tr_delete_body">The file is deleted from this phone.</string>
+    <string name="notif_enable">Notifications are off: you will only see requests from other devices while this app is open.</string>
+    <string name="notif_turn_on">Turn on</string>
+    <string name="refresh">Refresh</string>
+    <string name="search">Search</string>
+    <string name="up">Up one level</string>
+    <string name="loading">Loading</string>
+    <string name="try_again">Try again</string>
+    <string name="show_password">Show password</string>
+    <string name="hide_password">Hide password</string>
+    <string name="open_settings">Open settings</string>
+
+    <!-- status plate -->
+    <string name="status_connected">Connected</string>
+    <string name="status_connected_ro">Connected, read-only</string>
+    <string name="status_connecting">Connecting to your Drive</string>
+    <string name="status_pending">Waiting for approval</string>
+    <string name="status_offline">Offline</string>
+    <string name="status_needs_setup">Needs setup</string>
+    <string name="status_signed_out">Signed out</string>
+    <string name="status_stopped">Stopped</string>
+    <string name="status_retrying">Can’t reach the hub. Retrying.</string>
+    <string name="status_reaching_hub">Reaching the hub</string>
+    <string name="status_needs_setup_proof">Set the Drive and hub addresses in Settings.</string>
+    <string name="status_pending_proof">Approve this device from your Drive.</string>
+    <string name="status_encrypted">Encrypted</string>
+
+    <!-- sign in -->
+    <string name="signin_tagline">Your Drive, on this device.</string>
+    <string name="signin_approve_title">Approve this device</string>
+    <string name="signin_approve_body">Open your Drive and check that the code reads:</string>
+    <string name="signin_open_page">Open the approval page</string>
+    <string name="signin_waiting">Waiting for approval…</string>
+    <string name="signin_field_drive">Drive address</string>
+    <string name="signin_field_hub">Hub address</string>
+    <string name="signin_field_device">This device’s name</string>
+    <string name="signin_hint_hub">The hub’s leaf port, the same --hub you give “jsync mount”.</string>
+    <string name="signin_button">Sign in</string>
+    <string name="signin_trust_ca">My Drive uses its own certificate authority…</string>
+    <string name="signin_trust_ca_count">Trusted certificate authorities: %1$d (add another)</string>
+    <string name="signin_trust_ca_help">If your Drive’s certificate comes from your own CA, pick its .crt or .pem file. A CA you already installed in Android’s settings is picked up automatically.</string>
+
+    <!-- files -->
+    <string name="files_root">Drive</string>
+    <string name="files_boxes">Folders</string>
+    <string name="files_contents">Files</string>
+    <string name="meta_folder">Folder</string>
+    <string name="meta_encrypted_locked">Encrypted · locked</string>
+    <string name="meta_encrypted_open">Encrypted · open</string>
+    <string name="door_desc_plain">Folder %1$s</string>
+    <string name="door_desc_locked">Folder %1$s, encrypted, locked</string>
+    <string name="door_desc_open">Folder %1$s, encrypted, open</string>
+    <string name="more_actions">Actions for %1$s</string>
+    <string name="upload_files">Upload files</string>
+    <string name="new_folder">New folder</string>
+    <string name="empty_title">Nothing in here yet</string>
+    <string name="empty_body">This folder is empty.</string>
+    <string name="empty_body_add">Add files, or make a folder to put them in.</string>
+    <string name="error_load">Couldn’t open this folder</string>
+    <string name="error_generic">Error</string>
+    <string name="delete_title">Delete %1$s?</string>
+    <string name="delete_body">It goes to your Drive’s trash.</string>
+    <string name="lock_now">Lock now</string>
+    <string name="locked_title">End-to-end encrypted</string>
+    <string name="locked_body">Its names and contents can only be read with your vault password.</string>
+    <string name="unlock_named">Unlock %1$s</string>
+
+    <!-- search -->
+    <string name="search_hint">Search your Drive</string>
+    <string name="search_prompt">Type a name to find files and folders anywhere in your Drive.</string>
+    <string name="search_none">Nothing called “%1$s”.</string>
+    <string name="close_search">Close search</string>
+
+    <!-- uploads -->
+    <string name="uploads">Uploads</string>
+    <string name="upload_working">Uploading</string>
+    <string name="upload_done">Uploaded</string>
+    <string name="upload_failed">Upload failed</string>
+
+    <!-- vault dialogs -->
+    <string name="unlock">Unlock</string>
+    <string name="unlocking">Checking…</string>
+    <string name="unlock_title">Unlock %1$s</string>
+    <string name="unlock_body">Enter your vault password. It is checked on this phone and never sent anywhere.</string>
+    <string name="unlock_nothing">Nothing to unlock</string>
+    <string name="vault_password">Vault password</string>
+    <string name="lock_after">Lock again after</string>
+    <string name="lock_after_30m">30 min</string>
+    <string name="lock_after_4h">4 h</string>
+    <string name="lock_after_never">Never</string>
+    <string name="pick_drive_folder">Sync with which Drive folder?</string>
+    <string name="no_folders">No folders here</string>
+    <string name="use_whole_drive">Use the whole Drive</string>
+    <string name="use_folder">Use %1$s</string>
+
+    <!-- sync -->
+    <string name="sync_explainer">A folder on this phone is kept equal to a folder of your Drive, both ways. If both sides changed, both versions are kept. Deleting a file deletes it on the other side too (from the Drive it goes to the trash).</string>
+    <string name="sync_empty_title">Nothing synced yet</string>
+    <string name="sync_empty_body">Pick a folder on this phone and a folder of your Drive, and they stay in step.</string>
+    <string name="sync_add">Sync a folder</string>
+    <string name="sync_now">Sync now</string>
+    <string name="sync_stop">Stop syncing</string>
+    <string name="sync_stop_title">Stop syncing %1$s?</string>
+    <string name="sync_stop_body">Files stay where they are, on the phone and in the Drive.</string>
+    <string name="sync_stop_confirm">Stop</string>
+    <string name="sync_pair">↔ %1$s</string>
+    <string name="sync_paused">Paused</string>
+    <string name="sync_waiting">Waiting</string>
+    <string name="sync_phone_folder">Phone folder</string>
+
+    <!-- devices -->
+    <string name="devices_explainer">Files go straight from device to device, over your network or through a relay when the server provides one. The server only introduces them.</string>
+    <string name="devices_empty_title">No other devices yet</string>
+    <string name="devices_empty_body">Sign in on another device and it shows up here.</string>
+    <string name="device_online">Online</string>
+    <string name="device_offline">Offline</string>
+    <string name="device_trust">Accept files from this device without asking</string>
+    <string name="transfers">Transfers</string>
+    <string name="transfer_to">To %1$s</string>
+    <string name="transfer_from">From %1$s</string>
+    <string name="transfer_incoming">Wants to send you this file (%1$s)</string>
+    <string name="transfer_incoming_short">Incoming</string>
+    <string name="transfer_progress">%1$s of %2$s</string>
+    <string name="transfer_connecting">Connecting…</string>
+    <string name="transfer_sent">Sent (%1$s)</string>
+    <string name="transfer_received">Received (%1$s), saved in Downloads/jsync</string>
+    <string name="transfer_working">In progress</string>
+    <string name="transfer_done">Done</string>
+    <string name="transfer_declined">Declined</string>
+    <string name="transfer_cancelled">Cancelled</string>
+    <string name="transfer_failed">Failed</string>
+    <string name="accept">Accept</string>
+    <string name="accept_always">Always</string>
+    <string name="decline">Decline</string>
+
+    <!-- settings -->
+    <string name="settings_account">Account</string>
+    <string name="settings_this_device">This device</string>
+    <string name="settings_device_id">Device ID</string>
+    <string name="settings_connection">Connection</string>
+    <string name="settings_apply">Apply and reconnect</string>
+    <string name="settings_trust_ca">Trust a certificate authority (%1$d added)</string>
+    <string name="settings_behaviour">Behaviour</string>
+    <string name="settings_readonly">Read-only</string>
+    <string name="settings_readonly_body">Don’t ask the hub for write access; nothing on this phone can change the Drive.</string>
+    <string name="settings_background">Stay connected in the background</string>
+    <string name="settings_background_body">Keeps changes flowing to file managers while the app is closed (shows a notification).</string>
+    <string name="settings_encrypted">Encrypted folders</string>
+    <string name="settings_folder_open">Open</string>
+    <string name="settings_folder_locked">Locked</string>
+    <string name="settings_leave">Leave</string>
+    <string name="settings_signout">Sign out and revoke this device</string>
+    <string name="settings_signout_title">Sign out of this device?</string>
+    <string name="settings_signout_body">This device stops seeing your Drive and its access is revoked. You can sign in again at any time.</string>
+
+    <!-- share sheet -->
+    <plurals name="share_count">
+        <item quantity="one">%1$d file to share</item>
+        <item quantity="other">%1$d files to share</item>
+    </plurals>
+    <string name="share_to_drive">To the Drive</string>
+    <string name="share_to_device">To another device</string>
+    <string name="share_to_device_title">Send to a device</string>
+    <string name="share_sign_in_first">Open jsync Drive and sign in first.</string>
+    <string name="share_read_only">The Drive is mounted read-only.</string>
+    <string name="share_no_subfolders">No folders in here. Upload to this one.</string>
+    <string name="share_uploading">Uploading…</string>
+    <string name="share_upload_here">Upload to %1$s</string>
+
+    <!-- messages -->
+    <string name="msg_sending">Sending %1$d file(s) to %2$s</string>
+    <string name="msg_trusting">Trusting %1$d certificate(s) from that file</string>
+    <string name="msg_bad_certificate">Could not use that file as a certificate: %1$s</string>
+    <string name="err_wrong_password">Wrong password</string>
+    <string name="err_create_folder">Could not create the folder</string>
+    <string name="err_rename">Could not rename</string>
+    <string name="err_delete">Could not delete</string>
+    <string name="err_read_only">This place is read-only</string>
+    <string name="msg_opening">Opening %1$s…</string>
+    <string name="err_open">Could not open the file</string>
+    <string name="err_failed">Failed</string>
+</resources>

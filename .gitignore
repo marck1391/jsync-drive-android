@@ -1,0 +1,19 @@
+.gradle/
+build/
+app/build/
+local.properties
+tmp/
+*.apk
+.idea/
+# built from ../filesharer by build-node.ps1
+app/src/main/jniLibs/
+
+# local test rigs
+.test/
+dist/
+
+# design-review scratch (screenshots show real Drive content)
+.impeccable/
+
+# the app signing key: never commit it (anyone with it can sign apps that update yours)
+keystore/

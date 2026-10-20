@@ -1,0 +1,10 @@
+<resources>
+    <!-- Dark by default: the vault enamel shows from the first frame, so there is no white flash on start. -->
+    <style name="Theme.JsyncDrive" parent="android:Theme.Material.NoActionBar">
+        <item name="android:windowBackground">@color/window_bg</item>
+        <item name="android:colorBackground">@color/window_bg</item>
+        <item name="android:enforceNavigationBarContrast">false</item>
+        <item name="android:enforceStatusBarContrast">false</item>
+    </style>
+    <style name="Theme.JsyncDrive.Dialog" parent="android:Theme.Material.Dialog" />
+</resources>

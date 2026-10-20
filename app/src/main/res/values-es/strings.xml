@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">jsync Drive</string>
+    <string name="share_label">jsync Drive</string>
+    <string name="root_title">jsync Drive</string>
+    <string name="channel_connection">Conexión</string>
+    <string name="channel_transfers">Transferencias</string>
+    <string name="channel_requests">Archivos entrantes</string>
+
+    <!-- notifications -->
+    <string name="notif_connected">Conectado como %1$s</string>
+    <string name="notif_connecting">Conectando…</string>
+    <string name="notif_offline">Sin conexión, reintentando</string>
+    <string name="notif_pending">Esperando que apruebes este dispositivo</string>
+    <string name="notif_logged_out">Sesión no iniciada</string>
+    <string name="notif_needs_setup">Faltan las direcciones del Drive y del hub</string>
+    <string name="notif_starting">Iniciando…</string>
+    <string name="notif_wants_to_send">%1$s quiere enviarte un archivo</string>
+    <string name="notif_sending_to">Enviando a %1$s</string>
+    <string name="notif_receiving_from">Recibiendo de %1$s</string>
+    <string name="notif_received">Recibido: %1$s</string>
+    <string name="notif_received_body">De %1$s · guardado en Descargas/jsync</string>
+    <string name="notif_save_failed">No se pudo guardar %1$s</string>
+
+    <!-- navigation -->
+    <string name="nav_files">Archivos</string>
+    <string name="nav_sync">Sincronía</string>
+    <string name="nav_devices">Equipos</string>
+    <string name="nav_settings">Ajustes</string>
+
+    <!-- common -->
+    <string name="cancel">Cancelar</string>
+    <string name="clear">Quitar</string>
+    <string name="create">Crear</string>
+    <string name="delete">Eliminar</string>
+    <string name="rename">Renombrar</string>
+    <string name="name">Nombre</string>
+    <string name="add">Agregar</string>
+    <string name="send">Enviar</string>
+    <string name="view_list">Ver como lista</string>
+    <string name="view_grid">Ver como cuadrícula</string>
+    <string name="viewer_close">Cerrar</string>
+    <string name="viewer_open_with">Abrir con otra app</string>
+    <string name="viewer_failed">No se pudo cargar esta imagen. Toca para abrirla con otra app.</string>
+    <string name="share">Compartir</string>
+    <string name="pin">Fijar</string>
+    <string name="unpin">Quitar fijado</string>
+    <string name="download">Descargar</string>
+    <string name="share_with_people">Compartir con personas</string>
+    <string name="folder_color">Color de la carpeta</string>
+    <string name="color_default">Predeterminado</string>
+    <string name="color_blue">Azul</string>
+    <string name="color_green">Verde</string>
+    <string name="color_yellow">Amarillo</string>
+    <string name="color_red">Rojo</string>
+    <string name="color_purple">Morado</string>
+    <string name="color_orange">Naranja</string>
+    <string name="color_pink">Rosa</string>
+    <string name="color_cyan">Cian</string>
+    <string name="color_grey">Gris</string>
+    <string name="share_folder_title">Compartir %1$s</string>
+    <string name="share_with">Compartida con</string>
+    <string name="share_email">Correo de la persona</string>
+    <string name="perm_view">Puede ver</string>
+    <string name="perm_edit">Puede editar</string>
+    <string name="share_action">Compartir</string>
+    <string name="share_remove">Dejar de compartir con %1$s</string>
+    <string name="done">Listo</string>
+    <string name="msg_downloading">Descargando %1$s…</string>
+    <string name="msg_downloaded">%1$s guardado en Descargas</string>
+    <string name="err_color">No se pudo cambiar el color</string>
+    <string name="err_pin">No se pudo cambiar el fijado</string>
+    <string name="err_download">No se pudo descargar</string>
+    <string name="settings_about">Acerca de</string>
+    <string name="settings_version">Versión</string>
+    <string name="update_available">Hay una actualización: %1$s</string>
+    <string name="update_now">Actualizar</string>
+    <string name="update_downloading">Descargando la actualización… %1$d%%</string>
+    <string name="update_installing">Instalando la actualización…</string>
+    <string name="update_check">Buscar actualizaciones</string>
+    <string name="update_checking">Buscando…</string>
+    <string name="update_up_to_date">Tienes la última versión.</string>
+    <string name="update_none_yet">Aún no se ha publicado ninguna actualización en tu Drive.</string>
+    <string name="update_failed">Falló la actualización: %1$s</string>
+    <string name="update_bad_checksum">La actualización descargada no coincide con su suma de verificación</string>
+    <string name="update_allow_installs">Permite que esta app instale actualizaciones y toca Actualizar otra vez.</string>
+    <string name="tr_received_from">Recibido de %1$s</string>
+    <string name="tr_received_title">Recibidos</string>
+    <string name="tr_preview_after">La vista previa aparece cuando aceptes.</string>
+    <string name="tr_saving">Guardando…</string>
+    <string name="tr_saved_in">Guardado en %1$s</string>
+    <string name="tr_open">Abrir</string>
+    <string name="tr_close">Cerrar</string>
+    <string name="tr_always">Aceptar siempre de %1$s</string>
+    <string name="tr_delete_body">El archivo se elimina de este teléfono.</string>
+    <string name="notif_enable">Las notificaciones están desactivadas: solo verás las solicitudes de otros equipos con esta app abierta.</string>
+    <string name="notif_turn_on">Activar</string>
+    <string name="refresh">Actualizar</string>
+    <string name="search">Buscar</string>
+    <string name="up">Subir un nivel</string>
+    <string name="loading">Cargando</string>
+    <string name="try_again">Reintentar</string>
+    <string name="show_password">Mostrar contraseña</string>
+    <string name="hide_password">Ocultar contraseña</string>
+    <string name="open_settings">Abrir ajustes</string>
+
+    <!-- status plate -->
+    <string name="status_connected">Conectado</string>
+    <string name="status_connected_ro">Conectado, solo lectura</string>
+    <string name="status_connecting">Conectando con tu Drive</string>
+    <string name="status_pending">Esperando aprobación</string>
+    <string name="status_offline">Sin conexión</string>
+    <string name="status_needs_setup">Falta configurar</string>
+    <string name="status_signed_out">Sesión cerrada</string>
+    <string name="status_stopped">Detenido</string>
+    <string name="status_retrying">No se alcanza el hub. Reintentando.</string>
+    <string name="status_reaching_hub">Buscando el hub</string>
+    <string name="status_needs_setup_proof">Indica las direcciones del Drive y del hub en Ajustes.</string>
+    <string name="status_pending_proof">Aprueba este equipo desde tu Drive.</string>
+    <string name="status_encrypted">Cifrado</string>
+
+    <!-- sign in -->
+    <string name="signin_tagline">Tu Drive, en este equipo.</string>
+    <string name="signin_approve_title">Aprueba este equipo</string>
+    <string name="signin_approve_body">Abre tu Drive y comprueba que el código sea:</string>
+    <string name="signin_open_page">Abrir la página de aprobación</string>
+    <string name="signin_waiting">Esperando aprobación…</string>
+    <string name="signin_field_drive">Dirección del Drive</string>
+    <string name="signin_field_hub">Dirección del hub</string>
+    <string name="signin_field_device">Nombre de este equipo</string>
+    <string name="signin_hint_hub">El puerto leaf del hub, el mismo --hub que das a «jsync mount».</string>
+    <string name="signin_button">Iniciar sesión</string>
+    <string name="signin_trust_ca">Mi Drive usa su propia autoridad certificadora…</string>
+    <string name="signin_trust_ca_count">Autoridades certificadoras de confianza: %1$d (agregar otra)</string>
+    <string name="signin_trust_ca_help">Si el certificado de tu Drive viene de tu propia CA, elige su archivo .crt o .pem. Una CA que ya instalaste en los ajustes de Android se detecta sola.</string>
+
+    <!-- files -->
+    <string name="files_root">Drive</string>
+    <string name="files_boxes">Carpetas</string>
+    <string name="files_contents">Archivos</string>
+    <string name="meta_folder">Carpeta</string>
+    <string name="meta_encrypted_locked">Cifrada · cerrada</string>
+    <string name="meta_encrypted_open">Cifrada · abierta</string>
+    <string name="door_desc_plain">Carpeta %1$s</string>
+    <string name="door_desc_locked">Carpeta %1$s, cifrada, cerrada</string>
+    <string name="door_desc_open">Carpeta %1$s, cifrada, abierta</string>
+    <string name="more_actions">Acciones de %1$s</string>
+    <string name="upload_files">Subir archivos</string>
+    <string name="new_folder">Nueva carpeta</string>
+    <string name="empty_title">Aquí no hay nada todavía</string>
+    <string name="empty_body">Esta carpeta está vacía.</string>
+    <string name="empty_body_add">Agrega archivos o crea una carpeta para guardarlos.</string>
+    <string name="error_load">No se pudo abrir esta carpeta</string>
+    <string name="error_generic">Error</string>
+    <string name="delete_title">¿Eliminar %1$s?</string>
+    <string name="delete_body">Irá a la papelera de tu Drive.</string>
+    <string name="lock_now">Cerrar ahora</string>
+    <string name="locked_title">Cifrada de extremo a extremo</string>
+    <string name="locked_body">Sus nombres y su contenido solo se pueden leer con tu contraseña de bóveda.</string>
+    <string name="unlock_named">Abrir %1$s</string>
+
+    <!-- search -->
+    <string name="search_hint">Buscar en tu Drive</string>
+    <string name="search_prompt">Escribe un nombre para encontrar archivos y carpetas en todo tu Drive.</string>
+    <string name="search_none">No hay nada llamado «%1$s».</string>
+    <string name="close_search">Cerrar búsqueda</string>
+
+    <!-- uploads -->
+    <string name="uploads">Subidas</string>
+    <string name="upload_working">Subiendo</string>
+    <string name="upload_done">Subido</string>
+    <string name="upload_failed">Falló la subida</string>
+
+    <!-- vault dialogs -->
+    <string name="unlock">Abrir</string>
+    <string name="unlocking">Comprobando…</string>
+    <string name="unlock_title">Abrir %1$s</string>
+    <string name="unlock_body">Escribe tu contraseña de bóveda. Se comprueba en este teléfono y no se envía a ningún sitio.</string>
+    <string name="unlock_nothing">Nada que abrir</string>
+    <string name="vault_password">Contraseña de la bóveda</string>
+    <string name="lock_after">Volver a cerrar tras</string>
+    <string name="lock_after_30m">30 min</string>
+    <string name="lock_after_4h">4 h</string>
+    <string name="lock_after_never">Nunca</string>
+    <string name="pick_drive_folder">¿Con qué carpeta del Drive sincronizar?</string>
+    <string name="no_folders">No hay carpetas aquí</string>
+    <string name="use_whole_drive">Usar todo el Drive</string>
+    <string name="use_folder">Usar %1$s</string>
+
+    <!-- sync -->
+    <string name="sync_explainer">Una carpeta de este teléfono se mantiene igual que una carpeta de tu Drive, en ambos sentidos. Si cambian los dos lados, se conservan las dos versiones. Eliminar un archivo lo elimina también en el otro lado (en el Drive va a la papelera).</string>
+    <string name="sync_empty_title">Aún no sincronizas nada</string>
+    <string name="sync_empty_body">Elige una carpeta de este teléfono y una de tu Drive, y se mantendrán al día.</string>
+    <string name="sync_add">Sincronizar carpeta</string>
+    <string name="sync_now">Sincronizar ahora</string>
+    <string name="sync_stop">Dejar de sincronizar</string>
+    <string name="sync_stop_title">¿Dejar de sincronizar %1$s?</string>
+    <string name="sync_stop_body">Los archivos se quedan donde están, en el teléfono y en el Drive.</string>
+    <string name="sync_stop_confirm">Dejar de sincronizar</string>
+    <string name="sync_pair">↔ %1$s</string>
+    <string name="sync_paused">En pausa</string>
+    <string name="sync_waiting">En espera</string>
+    <string name="sync_phone_folder">Carpeta del teléfono</string>
+
+    <!-- devices -->
+    <string name="devices_explainer">Los archivos van directos de un equipo a otro, por tu red o por un relevo si el servidor lo ofrece. El servidor solo los presenta.</string>
+    <string name="devices_empty_title">Aún no hay otros equipos</string>
+    <string name="devices_empty_body">Inicia sesión en otro equipo y aparecerá aquí.</string>
+    <string name="device_online">En línea</string>
+    <string name="device_offline">Sin conexión</string>
+    <string name="device_trust">Aceptar archivos de este equipo sin preguntar</string>
+    <string name="transfers">Transferencias</string>
+    <string name="transfer_to">A %1$s</string>
+    <string name="transfer_from">De %1$s</string>
+    <string name="transfer_incoming">Quiere enviarte este archivo (%1$s)</string>
+    <string name="transfer_incoming_short">Entrante</string>
+    <string name="transfer_progress">%1$s de %2$s</string>
+    <string name="transfer_connecting">Conectando…</string>
+    <string name="transfer_sent">Enviado (%1$s)</string>
+    <string name="transfer_received">Recibido (%1$s), guardado en Descargas/jsync</string>
+    <string name="transfer_working">En curso</string>
+    <string name="transfer_done">Listo</string>
+    <string name="transfer_declined">Rechazado</string>
+    <string name="transfer_cancelled">Cancelado</string>
+    <string name="transfer_failed">Falló</string>
+    <string name="accept">Aceptar</string>
+    <string name="accept_always">Siempre</string>
+    <string name="decline">Rechazar</string>
+
+    <!-- settings -->
+    <string name="settings_account">Cuenta</string>
+    <string name="settings_this_device">Este equipo</string>
+    <string name="settings_device_id">ID del equipo</string>
+    <string name="settings_connection">Conexión</string>
+    <string name="settings_apply">Aplicar y reconectar</string>
+    <string name="settings_trust_ca">Confiar en una autoridad certificadora (%1$d agregadas)</string>
+    <string name="settings_behaviour">Comportamiento</string>
+    <string name="settings_readonly">Solo lectura</string>
+    <string name="settings_readonly_body">No pide al hub permiso de escritura; nada de este teléfono puede cambiar el Drive.</string>
+    <string name="settings_background">Mantener la conexión en segundo plano</string>
+    <string name="settings_background_body">Los cambios siguen llegando a los gestores de archivos con la app cerrada (muestra una notificación).</string>
+    <string name="settings_encrypted">Carpetas cifradas</string>
+    <string name="settings_folder_open">Abierta</string>
+    <string name="settings_folder_locked">Cerrada</string>
+    <string name="settings_leave">Salir</string>
+    <string name="settings_signout">Cerrar sesión y revocar este equipo</string>
+    <string name="settings_signout_title">¿Cerrar sesión en este equipo?</string>
+    <string name="settings_signout_body">Este equipo deja de ver tu Drive y se revoca su acceso. Puedes volver a iniciar sesión cuando quieras.</string>
+
+    <!-- share sheet -->
+    <plurals name="share_count">
+        <item quantity="one">%1$d archivo para compartir</item>
+        <item quantity="many">%1$d archivos para compartir</item>
+        <item quantity="other">%1$d archivos para compartir</item>
+    </plurals>
+    <string name="share_to_drive">Al Drive</string>
+    <string name="share_to_device">A otro equipo</string>
+    <string name="share_to_device_title">Enviar a un equipo</string>
+    <string name="share_sign_in_first">Abre jsync Drive e inicia sesión primero.</string>
+    <string name="share_read_only">El Drive está montado en solo lectura.</string>
+    <string name="share_no_subfolders">No hay carpetas aquí. Sube a esta.</string>
+    <string name="share_uploading">Subiendo…</string>
+    <string name="share_upload_here">Subir a %1$s</string>
+
+    <!-- messages -->
+    <string name="msg_sending">Enviando %1$d archivo(s) a %2$s</string>
+    <string name="msg_trusting">Se confía en %1$d certificado(s) de ese archivo</string>
+    <string name="msg_bad_certificate">No se pudo usar ese archivo como certificado: %1$s</string>
+    <string name="err_wrong_password">Contraseña incorrecta</string>
+    <string name="err_create_folder">No se pudo crear la carpeta</string>
+    <string name="err_rename">No se pudo renombrar</string>
+    <string name="err_delete">No se pudo eliminar</string>
+    <string name="err_read_only">Este lugar es de solo lectura</string>
+    <string name="msg_opening">Abriendo %1$s…</string>
+    <string name="err_open">No se pudo abrir el archivo</string>
+    <string name="err_failed">Falló</string>
+</resources>
